@@ -13,7 +13,7 @@
 **key can be any function that returns a comparable value** 
 
 ### Add element 
-`l = l + [1]` 
+`l = l + [1]`   
 `l.append(1)` *# in-place*  
 
 ### Matrix 
