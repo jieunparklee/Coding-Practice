@@ -10,7 +10,7 @@
 `l = sorted(l)`  
 `l.sort()` *# in-place*  
 `l.sort(key=len, reverse=True)` *# sort by length, reverse (longer strings come first)*  
-* **key can be any function that returns a comparable value** * 
+**key can be any function that returns a comparable value** 
 
 ### Add element 
 `l = l + [1]` 
