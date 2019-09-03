@@ -10,7 +10,7 @@
 `l = sorted(l)`  
 `l.sort()` *# in-place*  
 `l.sort(key=len, reverse=True)` *# sort by length, reverse (longer strings come first)*  
-`l.sort(key=lambda e: len(e), reverse=True)` *same functionality as above*
+`l.sort(key=lambda e: len(e), reverse=True)` *same functionality as above*           
 **key can be any function that returns a comparable value** 
 
 ### Add element 
@@ -21,11 +21,13 @@
 `[[0 for _ in range(b)] for _ in range(a)]` *# a by b matrix*  
 
 ### Count
-`l.count(1)` *# count the number of 1s in list l* **works for string as well**   
+`l.count(1)` *# count the number of 1s in list l*              
+**works for string as well**   
 
 ### Index
-`l.index(1,k)` *# return the first occurence of 1 after index k (inclusive) in l*   
-**works for string as well**    
+`l.index(1,k)` *# return the first occurence of 1 after index k (inclusive) in l*           
+**works for string as well**     
+
 `l = [0,1,2]`  
 `l[5]` *# IndexError: list index out of range*    
 `l[5:]` &rarr; `[]` *# Slicing out of range works*   
@@ -43,7 +45,7 @@ right child : 2i+2
 `str = str.replace(" ", "")`    
 `str = str[::-1]`  
 
-`sorted_list = sorted(str)` *# str &rarr; list of sorted chars*
+`sorted_list = sorted(str)` *# str &rarr; list of sorted chars*    
 `sorted_str = "".join(sorted(str))`  
 
 `list_chars = list(str)` *# str &rarr; list of chars*
