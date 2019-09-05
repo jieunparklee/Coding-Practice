@@ -33,6 +33,11 @@
 `l[5:]` &rarr; `[]` *# Slicing out of range works*   
 `l[:5]` &rarr; `[0,1,2]`   
 
+### Assign
+`l = [1,2,3]`        
+`l[:] = [2,3,1]` *# in-place reassignment to existing variable l*          
+`l = [2,3,1]` *# make variable l point to a new array object*             
+
 ### Tree representation
 node : i     
 left child : 2i+1    
@@ -56,7 +61,24 @@ right child : 2i+2
 
 ### Sort  
 ```
-best_item = sorted(dic.items(), key=lambda item: item[1])[0]  
+best_item = sorted(dict.items(), key=lambda item: item[1])[0]  
 best_key = best_item[0]  
 best_value = best_item[1]  
 ```
+
+`best_item = sorted(dict.items(), key=lambda item: (item[1], item[0]))[0]` *# tie-breaker with key value (item[0])*        
+
+```
+heap = [(-freq, word) for word, freq in count.items()]
+heapq.heapify(heap)
+top_k_freq = [heapq.heappop(heap)[1] for _ in range(k)]
+```
+
+## [ Set ]   
+`s = set([])`     
+`s.add(1)` *# in-place*      
+`s = s | {1}` *# using or functionality*        
+
+`set([1,2,3]) & set([2,3])` &rarr; `set([2,3])` *# get intersection* 
+
+
