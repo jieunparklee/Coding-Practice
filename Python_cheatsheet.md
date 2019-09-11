@@ -74,6 +74,16 @@ heapq.heapify(heap)
 top_k_freq = [heapq.heappop(heap)[1] for _ in range(k)]
 ```
 
+### Ordered Dictionary 
+*From Python 3.7 insertion order is guaranteed for ordinary dictionary as well*           
+```
+self.dic = collections.OrderedDict()
+val = self.dic.pop(key) 
+self.dic.popitem(last=False) 
+self.dic.move_to_end(key)
+```       
+
+
 ## [ Set ]   
 `s = set([])`     
 `s.add(1)` *# in-place*      
@@ -82,3 +92,23 @@ top_k_freq = [heapq.heappop(heap)[1] for _ in range(k)]
 `set([1,2,3]) & set([2,3])` &rarr; `set([2,3])` *# get intersection* 
 
 
+## [ Function ]
+### Nested functions
+```
+def main() :
+	x = 1
+	def add(y) :
+		nonlocal x # make x accessible (read/write)
+		x+=y
+	add(2)
+	print(x) # 3 
+``` 
+
+```
+def main() :
+	x = []
+	def add(y) :
+		x.append(y) # iterables can be accessed without the nonlocal keyword 
+	add(2)
+	print(x) # [2] 
+``` 
