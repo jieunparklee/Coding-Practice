@@ -87,28 +87,33 @@ self.dic.move_to_end(key)
 ## [ Set ]   
 `s = set([])`     
 `s.add(1)` *# in-place*      
-`s = s | {1}` *# using or functionality*        
+`s = s | {1}` *# union, using or functionality*        
 
-`set([1,2,3]) & set([2,3])` &rarr; `set([2,3])` *# get intersection* 
+`set([1,2,3]) & set([2,3])` &rarr; `set([2,3])` *# get intersection*       
+
+`set([1,2,3]) - set([2,3])` &rarr; `set([1])` *# get difference*       
+`set([1,2]) - set([1,2,3])` &rarr; `set([])`                       
+`set([1,2]) ^ set([1,2,3])` &rarr; `set([3])` *# get symmetric difference*       
+
 
 
 ## [ Function ]
 ### Nested functions
 ```
 def main() :
-	x = 1
-	def add(y) :
-		nonlocal x # make x accessible (read/write)
-		x+=y
-	add(2)
-	print(x) # 3 
+  x = 1
+  def add(y) :
+	nonlocal x # make x accessible (read/write)
+	x+=y
+  add(2)
+  print(x) # 3 
 ``` 
 
 ```
 def main() :
-	x = []
-	def add(y) :
-		x.append(y) # iterables can be accessed without the nonlocal keyword 
+  x = []
+  def add(y) :
+	x.append(y) # iterables can be accessed without the nonlocal keyword 
 	add(2)
-	print(x) # [2] 
+  print(x) # [2] 
 ``` 
