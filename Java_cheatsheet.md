@@ -86,7 +86,11 @@ if (map.containsKey("apple")) {
 ```
 
 ## [ String ]
-`str.split(" ")` 
+```
+String str = "Hello World !";
+String[] strArr = str.split(" ");
+```                                    
+*strArr: {"Hello", "World", "!"}*
 
 ```
 char[] chars = {'a','p','p','l','e'};
