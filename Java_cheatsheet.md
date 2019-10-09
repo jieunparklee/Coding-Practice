@@ -80,7 +80,7 @@ map.put("apple", 10);
 map.put("banana", 5);
 
 if (map.containsKey("apple")) {
-	System.out.println(map.get("apple")
+	System.out.println(map.get("apple");
 }
 
 ```
@@ -104,7 +104,7 @@ str1.compareTo(str2);
 ## [ Stack ]
 ```
 Stack<Integer> st = new Stack<Integer>();
-st.push(new Integer(1))
+st.push(new Integer(1));
 Integer a = (Integer) st.pop();
 ```
 
@@ -112,7 +112,7 @@ Integer a = (Integer) st.pop();
 ```
 Integer.toString(int1);
 Double.parseDouble(strD);
-Integer.parseInt(strI)l
+Integer.parseInt(strI);
 ```
 
 
