@@ -87,6 +87,7 @@ self.dic.move_to_end(key)
 ## [ Set ]   
 `s = set([])`     
 `s.add(1)` *# in-place*      
+`s.remove(1)`               
 `s = s | {1}` *# union, using or functionality*        
 
 `set([1,2,3]) & set([2,3])` &rarr; `set([2,3])` *# get intersection*       
@@ -117,3 +118,13 @@ def main() :
 	add(2)
   print(x) # [2] 
 ``` 
+
+## [ Heap ]
+```
+import heapq
+
+heap = []
+heapq.heappush(heap, e)
+heapq.heappop(heap)
+```
+*descending by default*          

@@ -18,12 +18,9 @@ Collections.reverse(Arrays.asList(inputArray));
 *reversing a string*
 
 ### Sort
-```
-import java.util.Arrays;  
-
-Arrays.sort(arr); 
-```
-`Arrays.sort(arr, 1, 5);` *# only sort from index 1 to 4*     
+`import java.util.Arrays;`       
+`Arrays.sort(arr);` *in-place*                 
+`Arrays.sort(arr, 1, 5);` *# only sort from index 1 to 4*     f
 
 ### Length 
 `arr.length` *For string it is `str.length()`*    
@@ -82,7 +79,7 @@ Map<String, Integer> map = new HashMap<>();
 map.put("apple", 10); 
 map.put("banana", 5);
 
-if map.containsKey("apple") {
+if (map.containsKey("apple")) {
 	System.out.println(map.get("apple")
 }
 
