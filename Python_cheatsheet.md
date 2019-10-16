@@ -31,7 +31,9 @@
 `l = [0,1,2]`  
 `l[5]` *# IndexError: list index out of range*    
 `l[5:]` &rarr; `[]` *# Slicing out of range works*   
-`l[:5]` &rarr; `[0,1,2]`   
+`l[:5]` &rarr; `[0,1,2]`         
+
+`l.rfind(1)` *# return the last occurence of 1*                    
 
 ### Assign
 `l = [1,2,3]`        
@@ -55,7 +57,8 @@ right child : 2i+2
 
 `list_chars = list(str)` *# str &rarr; list of chars*
 
-`str_list = str.split()` *# split str by space : "   hello   world  !" &rarr; ['hello', 'world', '!']*
+`str_list = str.split()` *# split str by space : "   hello   world  !" &rarr; ['hello', 'world', '!']*            
+`str.isdigit()` *check whether str is digit*               
 
 ## [ Dictionary ]  
 
