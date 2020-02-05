@@ -25,7 +25,7 @@
 **works for string as well**   
 
 ### Index
-`l.index(1,k)` *# return the first occurence of 1 after index k (inclusive) in l*           
+`l.index(1, k)` *# return the first occurence of 1 after index k (inclusive) in l*           
 **works for string as well**     
 
 `l = [0,1,2]`  
@@ -44,6 +44,10 @@
 node : i     
 left child : 2i+1    
 right child : 2i+2     
+
+### Other    
+`l.insert(i, x)` *# insert element x at index i*               
+`l.remove(x)` *# remove element x from l (first occurence)*           
 
 ## [ String ]  
 *str is immutable*
@@ -72,6 +76,8 @@ best_value = best_item[1]
 `best_item = sorted(dict.items(), key=lambda item: (item[1], item[0]))[0]` *# tie-breaker with key value (item[0])*        
 
 ```
+import heapq
+
 heap = [(-freq, word) for word, freq in count.items()]
 heapq.heapify(heap)
 top_k_freq = [heapq.heappop(heap)[1] for _ in range(k)]
@@ -80,12 +86,18 @@ top_k_freq = [heapq.heappop(heap)[1] for _ in range(k)]
 ### Ordered Dictionary 
 *From Python 3.7 insertion order is guaranteed for ordinary dictionary as well*           
 ```
-self.dic = collections.OrderedDict()
-val = self.dic.pop(key) 
-self.dic.popitem(last=False) 
-self.dic.move_to_end(key)
+self.dict = collections.OrderedDict()
+val = self.dict.pop(key) 
+self.dict.popitem(0)
+self.dict.popitem(last=False) 
+self.dict.move_to_end(key)
 ```       
 
+### Default
+`dict.get(1, [])` *# if key 1 does not exist returns []*      
+           
+`dict = collections.defaultdict(list)`             
+`dict[1].append(2)` *# dict[1] returns [2]*            
 
 ## [ Set ]   
 `s = set([])`     
@@ -130,4 +142,21 @@ heap = []
 heapq.heappush(heap, e)
 heapq.heappop(heap)
 ```
-*descending by default*          
+*descending by default*        
+
+## [ Collections ]
+```
+import collections         
+
+collections.OrderedDict()             
+collections.defaultdict(list)               
+collections.Counter(nums)
+```
+
+## [ Random ]             
+`import random`           
+
+`random.randint(a,b)` *# Return a random integer N such that a <= N <= b*                      
+`random.uniform(a,b)` *# Return a random floating point number N such that a <= N <= b*         
+`random.shuffle(array)` *# Return a shuffled array*                
+`random.sample(array, 3)` *# Return 3 elements sampled - without replacement*                  
